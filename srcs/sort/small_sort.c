@@ -6,7 +6,7 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 06:40:55 by tedcarpi          #+#    #+#             */
-/*   Updated: 2025/04/30 07:34:18 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2025/04/30 10:53:07 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,31 +20,23 @@ void	sort_two(t_stack **a)
 		sa(a, 1);
 }
 
-void	sort_three(t_stack **stack)
+void    sort_three(t_stack **stack)
 {
-	int	top;
-	int	mid;
-	int	bot;
+    int    top;
+    int    mid;
+    int    bot;
 
-	top = (*stack)->value;
-	mid = (*stack)->next->value;
-	bot = (*stack)->next->next->value;
-	if (top > mid && bot > top)
-		sa(stack, 1);
-	else if (top > mid && mid > bot)
-	{
-		sa(stack, 1);
-		rra(stack, 1);
-	}
-	else if (top > mid && bot > mid)
-		ra(stack, 1);
-	else if (mid > top && mid > bot)
-	{
-		sa(stack, 1);
-		ra(stack, 1);
-	}
-	else if (bot > mid && top > bot)
-		rra(stack, 1);
+    top = (*stack)->value;
+    mid = (*stack)->next->value;
+    bot = (*stack)->next->next->value;
+    if (top > mid && top > bot)
+        ra(stack, 1);
+    else if (mid > top && mid > bot)
+        rra(stack, 1);
+    top = (*stack)->value;
+    mid = (*stack)->next->value;
+    if (top > mid)
+        sa(stack, 1);
 }
 
 void	sort_five(t_stack **a, t_stack **b)
