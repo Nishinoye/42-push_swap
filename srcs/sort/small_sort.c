@@ -6,7 +6,7 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 06:40:55 by tedcarpi          #+#    #+#             */
-/*   Updated: 2025/04/30 10:53:07 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2025/04/30 11:03:36 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@ void	sort_two(t_stack **a)
 		sa(a, 1);
 }
 
-void    sort_three(t_stack **stack)
+void	sort_three(t_stack **stack)
 {
-    int    top;
-    int    mid;
-    int    bot;
+	int	top;
+	int	mid;
+	int	bot;
 
-    top = (*stack)->value;
-    mid = (*stack)->next->value;
-    bot = (*stack)->next->next->value;
-    if (top > mid && top > bot)
-        ra(stack, 1);
-    else if (mid > top && mid > bot)
-        rra(stack, 1);
-    top = (*stack)->value;
-    mid = (*stack)->next->value;
-    if (top > mid)
-        sa(stack, 1);
+	top = (*stack)->value;
+	mid = (*stack)->next->value;
+	bot = (*stack)->next->next->value;
+	if (top > mid && top > bot)
+		ra(stack, 1);
+	else if (mid > top && mid > bot)
+		rra(stack, 1);
+	top = (*stack)->value;
+	mid = (*stack)->next->value;
+	if (top > mid)
+		sa(stack, 1);
 }
 
 void	sort_five(t_stack **a, t_stack **b)
